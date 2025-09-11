@@ -1,0 +1,697 @@
+//Write a program to input two numbers and display their sum.
+
+#include <stdio.h>
+
+int main() {
+    int a, b, sum;
+
+    // Input two numbers
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    // Calculate sum
+    sum = a + b;
+
+    // Display result
+    printf("Sum = %d\n", sum);
+
+    return 0;
+}
+//output
+Enter two numbers: 3 4
+Sum = 7
+
+ //Write a program to input two numbers and display their sum, difference, product, and quotient.
+#include <stdio.h>
+
+int main() {
+    int a, b;           
+    int sum, diff, prod, quot;  
+
+    // Input two numbers
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+
+    // Perform operations
+    sum  = a + b;   
+    diff = a - b;  
+    prod = a * b;   
+    quot = a / b;   
+
+    // Display results
+    printf("Sum = %d\n", sum);
+    printf("Difference = %d\n", diff);
+    printf("Product = %d\n", prod);
+    printf("Quotient = %d\n", quot);
+
+    return 0;  
+}
+
+//output
+Enter two numbers: 10 2
+Sum = 12
+Difference = 8
+Product = 20
+Quotient = 5
+
+//Write a program to calculate the area and perimeter of a rectangle given its length and breadth
+
+#include <stdio.h>
+
+int main() {
+    int length, breadth, area, perimeter;
+
+    // Input length and breadth
+    printf("Enter length and breadth of rectangle: ");
+    scanf("%d %d", &length, &breadth);
+
+    // Calculate area and perimeter
+    area = length * breadth;
+    perimeter = 2 * (length + breadth);
+
+    // Display results
+    printf("Area = %d\n", area);
+    printf("Perimeter = %d\n", perimeter);
+
+    return 0;
+}
+//output
+Enter length and breadth of rectangle: 5 10
+Area = 50
+Perimeter = 30
+
+//Write a program to calculate the area and circumference of a circle given its radius.
+#include <stdio.h>
+
+int main() {
+    float radius, area, circumference;
+    float pi = 3.14;
+
+    printf("Enter radius of circle: ");
+    scanf("%f", &radius);
+
+    area = pi * radius * radius;
+    circumference = 2 * pi * radius;
+
+    printf("Area = %.2f\n", area);
+    printf("Circumference = %.2f\n", circumference);
+
+    return 0;
+}
+// output
+Enter radius of circle: 7
+Area = 153.94
+Circumference = 43.98
+
+//Write a program to convert temperature from Celsius to Fahrenheit.
+
+#include <stdio.h>
+
+int main() {
+    float c1, c2, f1, f2;
+
+    printf("Enter first temperature in Celsius: ");
+    scanf("%f", &c1);
+
+    printf("Enter second temperature in Celsius: ");
+    scanf("%f", &c2);
+
+    f1 = (c1 * 9 / 5) + 32;
+    f2 = (c2 * 9 / 5) + 32;
+
+    printf("%.2f Celsius = %.2f Fahrenheit\n", c1, f1);
+    printf("%.2f Celsius = %.2f Fahrenheit\n", c2, f2);
+
+    return 0;
+}
+// output
+Enter first temperature in Celsius: 0
+Enter second temperature in Celsius: 100
+0.00 Celsius = 32. Fahrenheit
+100.00 Celsius = 212.Fahrenheit
+
+//Write a program to swap two numbers using a third variable
+
+#include <stdio.h>
+
+int main() {
+    int a, b, temp;
+
+    // First pair
+    printf("Enter first pair of numbers: ");
+    scanf("%d %d", &a, &b);
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    printf("After swapping: a = %d, b = %d\n", a, b);
+
+    // Second pair
+    printf("Enter second pair of numbers: ");
+    scanf("%d %d", &a, &b);
+
+    temp = a;
+    a = b;
+    b = temp;
+
+    printf("After swapping: a = %d, b = %d\n", a, b);
+
+    return 0;
+}
+
+//output
+Enter first pair of numbers: 3 5
+After swapping: a = 5, b = 3
+Enter second pair of numbers: -1 1
+After swapping: a = 1, b = -1
+
+//write a program to swap two numbers without using a third variable.
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    // First pair
+    printf("Enter first pair of numbers: ");
+    scanf("%d %d", &a, &b);
+
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    printf("After swapping: a = %d, b = %d\n", a, b);
+
+    // Second pair
+    printf("Enter second pair of numbers: ");
+    scanf("%d %d", &a, &b);
+
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    printf("After swapping: a = %d, b = %d\n", a, b);
+
+    return 0;
+}
+//output
+Enter first pair of numbers: 10 20
+After swapping: a = 20, b = 10
+Enter second pair of numbers: 7 14
+After swapping: a = 14, b = 7
+
+//Write a program to find and display the sum of the first n natural numbers.
+
+#include <stdio.h>
+
+int main() {
+    int n1, n2, sum1 = 0, sum2 = 0;
+
+    // First input
+    printf("Enter first number: ");
+    scanf("%d", &n1);
+    for (int i = 1; i <= n1; i++) {
+        sum1 += i;
+    }
+    printf("Sum of first %d natural numbers = %d\n", n1, sum1);
+
+    // Second input
+    printf("Enter second number: ");
+    scanf("%d", &n2);
+    for (int i = 1; i <= n2; i++) {
+        sum2 += i;
+    }
+    printf("Sum of first %d natural numbers = %d\n", n2, sum2);
+
+    return 0;
+}
+//output
+Enter first number: 5
+Sum of first 5 natural numbers = 15
+Enter second number: 10
+Sum of first 10 natural numbers = 55
+
+//Write a program to calculate simple and compound interest for given principal, rate, and time.
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double principal, rate, time;
+    double simpleInterest, compoundInterest;
+
+    // First input
+    printf("Enter principal, rate and time for first case: ");
+    scanf("%lf %lf %lf", &principal, &rate, &time);
+
+    simpleInterest = (principal * rate * time) / 100;
+    compoundInterest = principal * pow(1 + rate / 100, time) - principal;
+
+    printf("Simple Interest = %.2f\n", simpleInterest);
+    printf("Compound Interest = %.2f\n", compoundInterest);
+
+    // Second input
+    printf("Enter principal, rate and time for second case: ");
+    scanf("%lf %lf %lf", &principal, &rate, &time);
+
+    simpleInterest = (principal * rate * time) / 100;
+    compoundInterest = principal * pow(1 + rate / 100, time) - principal;
+
+    printf("Simple Interest = %.2f\n", simpleInterest);
+    printf("Compound Interest = %.2f\n", compoundInterest);
+
+    return 0;
+}
+//output
+Enter principal, rate and time for first case: 1000 5 2
+Simple Interest = 100.00
+Compound Interest = 102.50
+Enter principal, rate and time for second case: 5000 7 3
+Simple Interest = 1050.00
+Compound Interest = 1125.50
+
+//Write a program to input time in seconds and convert it to hours:minutes:seconds format.
+
+#include <stdio.h>
+
+int main() {
+    int totalSeconds, hours, minutes, seconds;
+
+    printf("Enter time in seconds for first case: ");
+    scanf("%d", &totalSeconds);
+
+    hours = totalSeconds / 3600;
+    minutes = (totalSeconds % 3600) / 60;
+    seconds = totalSeconds % 60;
+
+    printf("%d seconds = %d:%d:%d (hh:mm:ss)\n", totalSeconds, hours, minutes, seconds);
+
+    printf("Enter time in seconds for second case: ");
+    scanf("%d", &totalSeconds);
+
+    hours = totalSeconds / 3600;
+    minutes = (totalSeconds % 3600) / 60;
+    seconds = totalSeconds % 60;
+
+    printf("%d seconds = %d:%d:%d (hh:mm:ss)\n", totalSeconds, hours, minutes, seconds);
+
+    return 0;
+}
+
+//output
+Enter time in seconds for first case: 3661
+3661 seconds = 1:1:1 
+Enter time in seconds for second case: 7322
+7322 seconds = 2:2:2 
+
+//Write a program to input an integer and check whether it is even or odd using if–else.
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    // First input
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    if (num % 2 == 0)
+        printf("%d is even\n", num);
+    else
+        printf("%d is odd\n", num);
+
+    // Second input
+    printf("Enter another integer: ");
+    scanf("%d", &num);
+
+    if (num % 2 == 0)
+        printf("%d is even\n", num);
+    else
+        printf("%d is odd\n", num);
+
+    return 0;
+}
+//output
+Enter an integer: 7
+7 is odd
+Enter another integer: 12
+12 is even
+
+//Write a program to input an integer and check whether it is positive, negative or zero using nested if–else.
+
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    // First input
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    if (num > 0)
+        printf("%d is positive\n", num);
+    else {
+        if (num < 0)
+            printf("%d is negative\n", num);
+        else
+            printf("%d is zero\n", num);
+    }
+
+    // Second input
+    printf("Enter another integer: ");
+    scanf("%d", &num);
+    if (num > 0)
+        printf("%d is positive\n", num);
+    else {
+        if (num < 0)
+            printf("%d is negative\n", num);
+        else
+            printf("%d is zero\n", num);
+    }
+
+    // Third input
+    printf("Enter another integer: ");
+    scanf("%d", &num);
+    if (num > 0)
+        printf("%d is positive\n", num);
+    else {
+        if (num < 0)
+            printf("%d is negative\n", num);
+        else
+            printf("%d is zero\n", num);
+    }
+
+    return 0;
+}
+// output
+Enter an integer: -5
+-5 is negative
+Enter another integer: 0
+0 is zero
+Enter another integer: 10
+10 is positive
+
+//Write a program to input a year and check whether it is a leap year or not using conditional statements.
+
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    // First input
+    printf("Enter a year: ");
+    scanf("%d", &year);
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+        printf("Leap year\n");
+    else
+        printf("Not a leap year\n");
+
+    // Second input
+    printf("Enter another year: ");
+    scanf("%d", &year);
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+        printf("Leap year\n");
+    else
+        printf("Not a leap year\n");
+
+    // Third input
+    printf("Enter another year: ");
+    scanf("%d", &year);
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+        printf("Leap year\n");
+    else
+        printf("Not a leap year\n");
+
+    return 0;
+}
+//output
+Enter a year: 2020
+Leap year
+Enter another year: 1900
+Not a leap year
+Enter another year: 2000
+Leap year
+ 
+ //Write a program to input a character and check whether it is a vowel or consonant using if–else.
+
+ #include <stdio.h>
+
+int main() {
+    char ch;
+
+    // First input
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+        ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+        printf("Vowel\n");
+    else
+        printf("Consonant\n");
+
+    // Second input
+    printf("Enter another character: ");
+    scanf(" %c", &ch);
+
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+        ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+        printf("Vowel\n");
+    else
+        printf("Consonant\n");
+
+    return 0;
+}
+//output
+Enter a character: a
+Vowel
+Enter another character: b
+Consonant
+
+//Write a program to input a character and check whether it is an uppercase alphabet, lowercase alphabet, digit, or special character.
+
+#include <stdio.h>
+
+int main() {
+    char ch;
+
+    // First input
+    printf("Enter a character: ");
+    scanf(" %c", &ch);
+
+    if (ch >= 'A' && ch <= 'Z')
+        printf("Uppercase alphabet\n");
+    else if (ch >= 'a' && ch <= 'z')
+        printf("Lowercase alphabet\n");
+    else if (ch >= '0' && ch <= '9')
+        printf("Digit\n");
+    else
+        printf("Special character\n");
+
+    // Second input
+    printf("Enter another character: ");
+    scanf(" %c", &ch);
+
+    if (ch >= 'A' && ch <= 'Z')
+        printf("Uppercase alphabet\n");
+    else if (ch >= 'a' && ch <= 'z')
+        printf("Lowercase alphabet\n");
+    else if (ch >= '0' && ch <= '9')
+        printf("Digit\n");
+    else
+        printf("Special character\n");
+
+    // Third input
+    printf("Enter another character: ");
+    scanf(" %c", &ch);
+
+    if (ch >= 'A' && ch <= 'Z')
+        printf("Uppercase alphabet\n");
+    else if (ch >= 'a' && ch <= 'z')
+        printf("Lowercase alphabet\n");
+    else if (ch >= '0' && ch <= '9')
+        printf("Digit\n");
+    else
+        printf("Special character\n");
+
+    // Fourth input
+    printf("Enter another character: ");
+    scanf(" %c", &ch);
+
+    if (ch >= 'A' && ch <= 'Z')
+        printf("Uppercase alphabet\n");
+    else if (ch >= 'a' && ch <= 'z')
+        printf("Lowercase alphabet\n");
+    else if (ch >= '0' && ch <= '9')
+        printf("Digit\n");
+    else
+        printf("Special character\n");
+    return 0;
+}
+//output
+Enter a character: A
+Uppercase alphabet
+Enter another character: a
+Lowercase alphabet
+Enter another character: 3
+Digit
+Enter another character: #
+Special character
+ //Write a program to input three numbers and find the largest among them using if–else.
+
+#include <stdio.h>
+
+int main() {
+    int a, b, c, largest;
+
+    // First input
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    if (a > b && a > c)
+        largest = a;
+    else if (b > c)
+        largest = b;
+    else
+        largest = c;
+
+    printf("Largest is %d\n", largest);
+
+    // Second input
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    if (a > b && a > c)
+        largest = a;
+    else if (b > c)
+        largest = b;
+    else
+        largest = c;
+
+    printf("Largest is %d\n", largest);
+
+    return 0;
+}
+//output
+Enter three numbers: 3 7 5
+Largest is 7
+Enter three numbers: -1 -5 0
+Largest is 0
+
+//Write a program to find the roots of a quadratic equation and categorize them.
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float a, b, c, d, r1, r2;
+
+    printf("Enter coefficients a, b, c: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    d = b*b - 4*a*c;
+
+    if (d > 0) {
+        r1 = (-b + sqrt(d)) / (2*a);
+        r2 = (-b - sqrt(d)) / (2*a);
+        printf("Roots are real and different: %.2f, %.2f\n", r1, r2);
+    } else if (d == 0) {
+        r1 = -b / (2*a);
+        printf("Roots are real and same: %.2f\n", r1);
+    } else {
+        printf("Roots are complex\n");
+    }
+
+    return 0;
+}
+//output
+Enter coefficients a, b, c: 1 -3 2
+Roots are real and different: 2, 1
+
+
+//Write a program that accepts a percentage (0-100) and assigns a grade based on the following criteria:
+ 90-100: Grade A 80-89: Grade B 70-79: Grade C 60-69: Grade D below 60: Grade F.
+
+#include <stdio.h>
+
+int main() {
+    int percentage;
+    scanf("%d", &percentage);
+
+    if(percentage >= 90 && percentage <= 100)
+        printf("Grade A\n");
+    else if(percentage >= 80)
+        printf("Grade B\n");
+    else if(percentage >= 70)
+        printf("Grade C\n");
+    else if(percentage >= 60)
+        printf("Grade D\n");
+    else
+        printf("Grade F\n");
+
+    return 0;
+}
+//output
+Input: 95
+Output: Grade A
+
+Input: 82
+Output: Grade B
+
+Input: 68
+Output: Grade D
+
+Input: 50
+Output: Grade F
+
+//Write a program to classify a triangle as Equilateral, Isosceles, or Scalene based on its side lengths.
+
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+
+    if(a == b && b == c)
+        printf("Equilateral");
+    else if(a == b || b == c || a == c)
+        printf("Isosceles");
+    else
+        printf("Scalene");
+
+    return 0;
+}
+//output
+Input: 3 3 3
+Output: Equilateral
+
+Input: 3 3 4
+Output: Isosceles
+
+Input: 2 3 4
+Output: Scalene
+ //
+
+ #include <stdio.h>
+
+int main() {
+    int day;
+    scanf("%d", &day);
+
+    switch(day) {
+  case 1: printf("Monday"); break;
+  case 2: printf("Tuesday"); break;
+  case 3: printf("Wednesday"); break;
+   case 4: printf("Thursday"); break;
+  case 5: printf("Friday"); break;
+  case 6: printf("Saturday"); break;
+  case 7: printf("Sunday"); break;
+  default: printf("Invalid input");
+    }
+
+    return 0;
+}
+//output
+
+Input: 1
+Output: Monday
+
+Input: 5
+Output: Friday
